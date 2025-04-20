@@ -5,7 +5,7 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	/*std::cout << "Класс Integer: " << '\n';
+	std::cout << "Класс Integer: " << '\n';
 
 	Integer num1 = 8;
 	
@@ -39,19 +39,7 @@ int main()
 	--num1;
 	std::cout << "--num1: " << num1 << "\n";
 	num1--;
-	std::cout << "num1--: " << num1 << "\n\n";*/
-
-	//double num = 2.75;
-	//Integer num1 = num;
-	/*Real num2 = num1;
-	if (num1.IsTheSameObj(num2))
-	{
-		std::cout << "avavavav";
-	}
-	else
-	{
-		std::cout << "aaaaaaa";
-	}*/
+	std::cout << "num1--: " << num1 << "\n\n";
 
 	return 0;
 }
