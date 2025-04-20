@@ -1,0 +1,57 @@
+#include "main.hpp"
+
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	/*std::cout << "Класс Integer: " << '\n';
+
+	Integer num1 = 8;
+	
+	std::cout << num1 << '\n';
+
+	std::cout << num1 << " четное? : " << num1.isEven() << '\n';
+	std::cout << num1 << " не четное? : " << num1.isOdd() << '\n';
+	std::cout << num1 << " положительное? : " << num1.isPositive() << '\n';
+	std::cout << num1 << " отричательное? : " << num1.isNegative() << '\n';
+	std::cout << num1 << " простое? : " << num1.isPrime() << '\n';
+
+	Integer num2 = 3;
+
+	std::cout << num1 << " и " << num2 << " взаимно простые? : " << Integer::isСoprime(num1, num2) << '\n';
+	std::cout << "Наибольший общий делитель " << num1 << " и " << num2 << "? : " << Integer::NOD(num1, num2) << '\n';
+	std::cout << "Наименьшее общее кратное " << num1 << " и " << num2 << "? : " << Integer::NOK(num1, num2) << "\n\n";
+
+
+	std::cout << "num1 = " << num1 
+		<< "\nnum2 = " << num2 << "\n\n";
+	std::cout << "num1 + num2 = " << num1 + num2 << '\n';
+	std::cout << "num1 - num2 = " << num1 - num2 << '\n';
+	std::cout << "num1 * num2 = " << num1 * num2 << '\n';
+	std::cout << "num1 % num2 = " << num1 % num2 << '\n';
+	std::cout << "num1 / num2 = " << num1 / num2 << "\n\n";
+
+	++num1;
+	std::cout << "++num1: " << num1 << "\n";
+	num1++;
+	std::cout << "num1++: " << num1 << "\n";
+	--num1;
+	std::cout << "--num1: " << num1 << "\n";
+	num1--;
+	std::cout << "num1--: " << num1 << "\n\n";*/
+
+	//double num = 2.75;
+	//Integer num1 = num;
+	/*Real num2 = num1;
+	if (num1.IsTheSameObj(num2))
+	{
+		std::cout << "avavavav";
+	}
+	else
+	{
+		std::cout << "aaaaaaa";
+	}*/
+
+	return 0;
+}
