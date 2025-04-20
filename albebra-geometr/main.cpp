@@ -5,7 +5,7 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	/*std::cout << "Класс Integer: " << '\n';
+	std::cout << "Класс Integer: " << '\n';
 
 	Integer num1 = 8;
 	
@@ -39,11 +39,7 @@ int main()
 	--num1;
 	std::cout << "--num1: " << num1 << "\n";
 	num1--;
-	std::cout << "num1--: " << num1 << "\n\n";*/
-	
-	Real num = 0.75;
-
-	std::cout << num;
+	std::cout << "num1--: " << num1 << "\n\n";
 	
 	return 0;
 }

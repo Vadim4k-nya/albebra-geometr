@@ -77,61 +77,109 @@ bool Real::IsPositive()
 
 Real operator+(const Real& A, const Real& B)
 {
-	return Real();
+	Real result;
+	result.intPart_ = A.intPart_ + B.intPart_;
+	result.ratPart_ = A.ratPart_ + B.ratPart_;
+	return result;
 }
 
 Real operator-(const Real& A, const Real& B)
 {
-	return Real();
+	Real result;
+	result.intPart_ = A.intPart_ - B.intPart_;
+	result.ratPart_ = A.ratPart_ - B.ratPart_;
+	return result;
 }
 
 Real operator*(const Real& A, const Real& B)
 {
-	return Real();
+	Real result;
+	result.intPart_ = A.intPart_ * B.intPart_;
+	result.ratPart_ = A.ratPart_ * B.ratPart_;
+	return result;
 }
 
 Real operator/(const Real& A, const Real& B)
 {
+	Real result;
+	result.intPart_ = A.intPart_ / B.intPart_;
+	result.ratPart_ = A.ratPart_ / B.ratPart_;
+	return result;
+}
+
+Real Real::operator+()
+{
 	return Real();
 }
 
-Integer Real::operator+()
+Real Real::operator-()
 {
-	return Integer();
-}
-
-Integer Real::operator-()
-{
-	return Integer();
+	return Real();
 }
 
 bool operator==(const Real& A, const Real& B)
 {
+	if ((A.intPart_ == B.intPart_) && (A.ratPart_ == B.ratPart_))
+	{
+		return true;
+	}
 	return false;
 }
 
 bool operator!=(const Real& A, const Real& B)
 {
-	return false;
+	return !(A == B);
 }
 
 bool operator<(const Real& A, const Real& B)
 {
+	if (A.intPart_ < B.intPart_)
+	{
+		return true;
+	}
+	else if (A.ratPart_ < B.ratPart_)
+	{
+		return true;
+	}
 	return false;
 }
 
 bool operator<=(const Real& A, const Real& B)
 {
+	if (A.intPart_ <= B.intPart_)
+	{
+		return true;
+	}
+	else if (A.ratPart_ <= B.ratPart_)
+	{
+		return true;
+	}
 	return false;
 }
 
 bool operator>(const Real& A, const Real& B)
 {
+	if (A.intPart_ > B.intPart_)
+	{
+		return true;
+	}
+	else if (A.ratPart_ > B.ratPart_)
+	{
+		return true;
+	}
 	return false;
 }
 
 bool operator>=(const Real& A, const Real& B)
 {
+	if (A.intPart_ >= B.intPart_)
+	{
+		return true;
+	}
+	else if (A.ratPart_ >= B.ratPart_)
+	{
+		return true;
+	}
 	return false;
 }
 

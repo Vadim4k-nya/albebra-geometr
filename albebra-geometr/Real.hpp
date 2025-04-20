@@ -39,9 +39,9 @@ public:
 
 	//Присваивающие версии операторов надо будет сделать (если возможно)
 
-	Integer operator+();
+	Real operator+();
 
-	Integer operator-();
+	Real operator-();
 
 	friend bool operator==(const Real& A, const Real& B);
 
