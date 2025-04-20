@@ -10,13 +10,13 @@ Rational::Rational(int numerator, int denominator)
 {
 	this->numerator_ = numerator;
 	this->denominator_ = denominator;
-	ModSimplifying();
 }
 
 Rational::Rational(double number)
 {
-	int intPart = static_cast<int>(std::round(number));
-	this->numerator_ = (intPart * 100);
+	int intPart = static_cast<int>(number);
+	number -= intPart;
+	this->numerator_ = (intPart * 100) + (number * 100);
 	this->denominator_ = 100;
 	ModSimplifying();
 }
@@ -44,7 +44,7 @@ Integer Rational::GetDenominator() const
 	return denominator_;
 }
 
-bool Rational::isProper() const
+bool Rational::IsProper() const
 {
 	if (numerator_.GetUnits() < denominator_.GetUnits())
 	{
@@ -56,28 +56,32 @@ bool Rational::isProper() const
 	}
 }
 
-bool Rational::isPositive() const
+bool Rational::IsNotProper() const
+{
+	return !IsProper();
+}
+
+bool Rational::IsPositive() const
 {
 	if (numerator_.GetSign() == denominator_.GetSign())
 	{
 		return true;
 	}
-	else
-	{
-		return false;
-	}
+	return false;
 }
 
-bool Rational::isSameThing() const
+bool Rational::IsNegative() const
 {
-	if (numerator_ == denominator_)
+	return !IsPositive();
+}
+
+bool Rational::IsTheSameObj(Rational& obj)const
+{
+	if (this == &obj)
 	{
 		return true;
 	}
-	else
-	{
-		return false;
-	}
+	return false;
 }
 
 Rational Rational::Reverse()

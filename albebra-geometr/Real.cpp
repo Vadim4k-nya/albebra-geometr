@@ -8,12 +8,16 @@ Real::Real(Integer intPart, Rational rationalPart)
 
 Real::Real(int number)
 {
-
+	this->intPart_ = number;
+	this->ratPart_ = Rational();
 }
 
 Real::Real(double number)
 {
-	
+	this->intPart_ = number;
+	int intPart = number;
+	number -= intPart;
+	this->ratPart_ = Rational(number);
 }
 
 Real::Real(std::string number) 
@@ -50,21 +54,25 @@ bool Real::IsDecimal()
 
 bool Real::IsTheSameObj(const Real& obj)
 {
-	if (*this == obj)
+	if (this == &obj)
 	{
 		return true;
 	}
 	return false;
 }
 
-bool Real::Negativity()
+bool Real::IsNegative()
 {
-	return false;
+	if ((intPart_.IsNegative() && ratPart_.IsNegative()) || (intPart_.IsPositive() && ratPart_.IsPositive()))
+	{
+		return false;
+	}
+	return true;
 }
 
-bool Real::Positivity()
+bool Real::IsPositive()
 {
-	return false;
+	return IsNegative();
 }
 
 Real operator+(const Real& A, const Real& B)

@@ -49,22 +49,24 @@ public:
 	//Методы определения свойств
 
 	//Четность
-	bool isEven()const;
+	bool IsEven()const;
 
 	//Не четность
-	bool isOdd()const;
+	bool IsOdd()const;
 
 	//Положительность
-	bool isPositive()const;
+	bool IsPositive()const;
 
 	//Отрицательность
-	bool isNegative()const;
+	bool IsNegative()const;
 
 	//Простота
-	bool isPrime()const;
+	bool IsPrime()const;
 
 	//Взаимная простота
-	static bool isСoprime(const Integer& A, const Integer& B);
+	static bool IsСoprime(const Integer& A, const Integer& B);
+
+	bool IsTheSameObj(Integer& obj)const;
 
 	// Наибольший общий делитель
 	static Integer NOD(const Integer& A, const Integer& B);

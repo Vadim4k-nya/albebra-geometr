@@ -29,13 +29,17 @@ public:
 	//Способы проверки состояния
 
 	//Правильность дроби
-	bool isProper()const;
+	bool IsProper()const;
+
+	bool IsNotProper()const;
 
 	//Положительность дроби
-	bool isPositive()const;
+	bool IsPositive()const;
+
+	bool IsNegative()const;
 
 	//Являются ли 2 числа одним и тем же объектом в программе
-	bool isSameThing()const;
+	bool IsTheSameObj(Rational& obj)const;
 
 	// Методы для получения значений
 

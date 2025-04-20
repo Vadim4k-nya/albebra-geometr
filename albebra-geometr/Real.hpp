@@ -25,9 +25,9 @@ public:
 
 	bool IsTheSameObj(const Real& obj);
 
-	bool Negativity();
+	bool IsNegative();
 
-	bool Positivity();
+	bool IsPositive();
 
 	friend Real operator+(const Real& A, const Real& B);
 

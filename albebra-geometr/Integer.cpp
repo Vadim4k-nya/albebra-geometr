@@ -20,13 +20,13 @@ Integer::Integer(int number)
 }
 
 Integer::Integer(double number)
-	:Integer(static_cast<int>(std::round(number))) {}
+	:Integer(static_cast<int>(number)) {}
 
 Integer::Integer(bool number)
 	:Integer(static_cast<int>(number)) {}
 
 Integer::Integer(std::string number)
-	:Integer(std::stod(number)) {}
+	:Integer(std::stoi(number)) {}
 
 void Integer::SetSign(bool newSign)
 {
@@ -48,27 +48,27 @@ unsigned Integer::GetUnits() const
 	return units_;
 }
 
-bool Integer::isEven() const
+bool Integer::IsEven() const
 {
 	return !(units_ % 2);
 }
 
-bool Integer::isOdd() const
+bool Integer::IsOdd() const
 {
 	return units_ % 2;
 }
 
-bool Integer::isPositive() const
+bool Integer::IsPositive() const
 {
 	return !sign_;
 }
 
-bool Integer::isNegative() const
+bool Integer::IsNegative() const
 {
 	return sign_;
 }
 
-bool Integer::isPrime() const
+bool Integer::IsPrime() const
 {
 	for (int i = 2; i <= sqrt(units_); i++) {
 		if (units_ % i == 0) {
@@ -78,9 +78,18 @@ bool Integer::isPrime() const
 	return true;
 }
 
-bool Integer::isÑoprime(const Integer& A, const Integer& B)
+bool Integer::IsÑoprime(const Integer& A, const Integer& B)
 {
 	if (NOD(A, B) == 1)
+	{
+		return true;
+	}
+	return false;
+}
+
+bool Integer::IsTheSameObj(Integer& obj) const
+{
+	if (this == &obj)
 	{
 		return true;
 	}
