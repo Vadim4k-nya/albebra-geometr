@@ -8,27 +8,27 @@
 class Point2d {
 public:
 	Point2d();
-	Point2d(Real point1, Real point2);
+	Point2d(Real x, Real y);
 
-	void SetPoint1();
+	void SetPointX(Real X);
 
-	void SetPoint2();
+	void SetPointY(Real Y);
 
-	Real GetPoint1();
+	Real GetPointX()const;
 
-	Real GetPoint2();
+	Real GetPointY()const;
 
 	friend bool operator==(const Point2d& A, const Point2d& B);
 
-	bool SamenessOfTwoPoints();
+	bool SamenessOfTwoPoints(const Point2d& obj);
 
-	Real SectionLength();
+	static Real SectionLength(const Point2d& point1, const Point2d& point2);
 
 	// виртуальный деструктор
 
 private:
-	Real point1_;
-	Real point2_;
+	Real x_;
+	Real y_;
 };
 
 #endif // !POINT2D_HPP

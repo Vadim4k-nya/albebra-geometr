@@ -109,7 +109,7 @@ Real operator/(const Real& A, const Real& B)
 
 Real Real::operator+()
 {
-	return Real();
+	return *this;
 }
 
 Real Real::operator-()

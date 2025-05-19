@@ -130,9 +130,11 @@
     <ClCompile Include="Integer.cpp" />
     <ClCompile Include="Integer.hpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Point2d.cpp" />
     <ClCompile Include="Point2d.hpp" />
     <ClCompile Include="Rational.cpp" />
     <ClCompile Include="Real.cpp" />
+    <ClCompile Include="Segment.cpp" />
     <ClCompile Include="Segment.hpp" />
   </ItemGroup>
   <ItemGroup>

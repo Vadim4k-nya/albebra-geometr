@@ -4,6 +4,7 @@
 #define REAL_HPP
 
 #include "Rational.hpp"
+#include <cmath>
 
 class Real {
 public:
